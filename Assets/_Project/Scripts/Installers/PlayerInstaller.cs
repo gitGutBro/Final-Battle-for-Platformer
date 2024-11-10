@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using UnityEngine;
+using Zenject;
 
 public class PlayerInstaller : MonoInstaller
 {
@@ -6,6 +7,9 @@ public class PlayerInstaller : MonoInstaller
     {
         print("PlayerInstaller installing.");
 
-        Container.Bind<PlayerPresentor>().AsSingle();
+        //TODO: Instantiate player prefab and bind to PlayerPresentor
+
+        //Container.Bind<PlayerPresentor>().AsSingle();
+        //Container.Bind<IPlayerView>().FromComponentInHierarchy().AsSingle();
     }
 }
